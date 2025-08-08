@@ -56,6 +56,60 @@
 			--footer-color-hover: #fa7900;
 		}
 	</style>
+	
+	<!-- CSS fix text alignment issues -->
+	<style>
+		/* Fix text justify alignment để tránh thụt thò lề phải */
+		.cSslide-captionSubtitle {
+			text-align: justify !important;
+			text-justify: inter-word;
+			word-spacing: 0.1em;
+			line-height: 1.6;
+			hyphens: auto;
+		}
+		
+		/* Cải thiện căn chỉnh text cho tất cả paragraph */
+		p {
+			text-align: justify !important;
+			text-justify: inter-word;
+			word-spacing: 0.1em;
+			hyphens: auto;
+		}
+		
+		/* Đặc biệt cho các đoạn text dài */
+		.cSslide-captionSubtitle,
+		.wrap-content p,
+		.content-text p {
+			text-align: justify !important;
+			text-justify: inter-word;
+			word-spacing: 0.15em;
+			line-height: 1.7;
+			hyphens: auto;
+		}
+		
+		/* Đảm bảo phần policy (services) vẫn căn giữa */
+		#main-policy .main-policy--info,
+		#main-policy .main-policy--info h3,
+		#main-policy .main-policy--info p {
+			text-align: center !important;
+		}
+		
+		.main-policy--inner-item {
+			text-align: center !important;
+		}
+		
+		.main-policy--box-img {
+			text-align: center !important;
+		}
+		
+		/* Đảm bảo footer copyright vẫn căn giữa */
+		.footer-copyright,
+		.footer-copyright.text-center,
+		.footer-copyright p {
+			text-align: center !important;
+		}
+	</style>
+	
 	<!-- Preload Logo -->
 	<link rel="preload" href="//theme.hstatic.net/200000762757/1001106067/14/logo.png?v=317" as="image">
 
@@ -15841,7 +15895,7 @@
 		prmt_icon.frame.icon = prmt_icon.frame.icon.split(',');
 	</script>
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Qu&#224; xưa Quế Hương" />
+	<meta property="og:title" content="Limonic - Since 2025" />
 	<meta property="og:image" content="http:" />
 	<meta property="og:image:secure_url" content="https:" />
 	<meta property="og:url" content="" />
@@ -17027,7 +17081,7 @@
 												<h3 class="cSslide-captionEl cSslide-captionTitle"
 													style="color: #cf0b0b;">Chanh Đào Ủ Muối Mật Ong</h3>
 												<div class="cSslide-captionEl cSslide-captionSubtitle"
-													style="color: black; ">Limonic không đơn thuần là một sản phẩm – đó
+													style="color: black; text-align: justify;">Limonic không đơn thuần là một sản phẩm – đó
 													là một mảnh ký ức được hồi sinh. Mỗi lọ chanh đào ủ muối mật ong mà
 													chúng tôi làm ra đều mang theo hơi thở của những ngày xưa cũ – khi
 													tiếng ho của con trẻ vang lên, mẹ lại tất bật mang lọ mật ong chanh

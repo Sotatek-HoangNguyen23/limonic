@@ -55,6 +55,219 @@
             --footer-color-text: #ffffff;
             --footer-color-hover: #fa7900;
         }
+
+        /* CSS để căn chỉnh layout cân đối và thẳng tắp */
+        .section-about01_introduce {
+            padding: 60px 0;
+        }
+
+        .section-about01_introduce .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .wrapflex-introduce {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            gap: 0;
+            margin: 40px 0;
+            min-height: 500px;
+        }
+
+        .intro-left,
+        .intro-right {
+            flex: 1;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: border-box;
+            border: 1px solid transparent; /* Để debug layout */
+        }
+
+        .intro-left {
+            padding-right: 20px;
+            align-items: flex-start;
+            display: flex;
+            justify-content: flex-end; /* Căn ảnh sát phía phải để thẳng hàng với lề trái của text */
+        }
+
+        .intro-right {
+            padding-left: 20px;
+            align-items: flex-start;
+        }
+
+        .intro-img {
+            width: 100%;
+            max-width: 500px; /* Giới hạn kích thước ảnh */
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end; /* Căn ảnh về phía phải của container */
+        }
+
+        .intro-img img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .intro-desc {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .wrap-heading {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .wrap-heading.text-center {
+            text-align: center;
+        }
+
+        /* Styling đặc biệt cho section VỀ CHÚNG TÔI chính - GIỮ NGUYÊN Ở GIỮA */
+        .section-about01_introduce > .container > .wrap-heading {
+            margin-bottom: 50px;
+            padding: 20px 0;
+            text-align: center !important; /* Đảm bảo luôn ở giữa */
+        }
+
+        .section-about01_introduce > .container > .wrap-heading p.line {
+            text-align: center !important;
+        }
+
+        .section-about01_introduce > .container > .wrap-heading h2 {
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: center !important;
+        }
+
+        /* TẤT CẢ các tiêu đề đều được căn giữa - FORCE OVERRIDE */
+        .wrap-heading {
+            text-align: center !important;
+        }
+
+        .wrap-heading.text-center {
+            text-align: center !important;
+        }
+
+        .wrap-heading p.line {
+            text-align: center !important;
+        }
+
+        .wrap-heading h2 {
+            text-align: center !important;
+        }
+
+        /* Đảm bảo cả tiêu đề trong wrapflex-introduce cũng căn giữa - OVERRIDE MỌI RULE KHÁC */
+        .wrapflex-introduce .wrap-heading {
+            text-align: center !important;
+        }
+
+        .wrapflex-introduce .wrap-heading.text-center {
+            text-align: center !important;
+        }
+
+        .wrapflex-introduce .wrap-heading p.line {
+            text-align: center !important;
+        }
+
+        .wrapflex-introduce .wrap-heading h2 {
+            text-align: center !important;
+        }
+
+        .wrap-content p {
+            text-align: justify !important;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 16px;
+            width: 100%;
+            text-justify: inter-word;
+        }
+
+        /* Đảm bảo tất cả text trong wrap-info đều căn đều */
+        .wrap-info {
+            text-align: justify !important;
+            line-height: 1.8 !important;
+            text-justify: inter-word;
+            hyphens: auto;
+        }
+
+        /* Tối ưu hóa căn chỉnh cho từng đoạn văn */
+        .wrap-info p,
+        .wrap-content > p {
+            text-align: justify !important;
+            text-justify: inter-word;
+            word-spacing: 0.1em;
+        }
+
+        /* Đảm bảo tất cả text được căn lề đều */
+        p {
+            text-align: justify;
+        }
+
+        /* Đảm bảo phần services vẫn căn giữa */
+        .section-about01-services .text-center,
+        .section-about01-services .text-center h3,
+        .section-about01-services .text-center p {
+            text-align: center !important;
+        }
+        
+        .services-area-content {
+            text-align: center !important;
+        }
+        
+        .services-area-content h3,
+        .services-area-content p {
+            text-align: center !important;
+        }
+
+        /* Responsive cho mobile */
+        @media (max-width: 768px) {
+            .wrapflex-introduce {
+                flex-direction: column;
+                gap: 30px;
+                min-height: auto;
+            }
+            
+            .intro-left,
+            .intro-right {
+                width: 100%;
+                padding: 0;
+                align-items: center;
+                text-align: center;
+            }
+
+            .wrap-heading,
+            .wrap-heading.text-center {
+                text-align: center;
+            }
+
+            /* Đảm bảo heading trong wrapflex cũng được căn giữa trên mobile */
+            .wrapflex-introduce .wrap-heading,
+            .wrapflex-introduce .wrap-heading.text-center {
+                text-align: center;
+            }
+
+            .section-about01_introduce {
+                padding: 40px 0;
+            }
+        }
+        
+        /* Đảm bảo footer copyright vẫn căn giữa */
+        .footer-copyright,
+        .footer-copyright.text-center,
+        .footer-copyright p {
+            text-align: center !important;
+        }
     </style>
     <!-- Preload Logo -->
     <link rel="preload" href="//theme.hstatic.net/200000762757/1001106067/14/logo.png?v=317" as="image">
@@ -15868,7 +16081,7 @@
         prmt_icon.frame.icon = prmt_icon.frame.icon.split(',');
     </script>
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Giới thiệu" />
+    <meta property="og:title" content="Limonic - Since 2025" />
     <meta property="og:image" content="http:" />
     <meta property="og:image:secure_url" content="https:" />
     <meta property="og:description"
@@ -16922,7 +17135,7 @@
                         <div class="wrap-content">
                             <div class="row justify-content-center">
                                 <div class="col-lg-5 col-md-6 col-12">
-                                    <div class="wrap-info">
+                                    <div class="wrap-info" style="text-align: justify; line-height: 1.8;">
                                         Chúng tôi tin rằng, tình thân và những điều tự nhiên luôn là liều thuốc chữa
                                         lành dịu dàng nhất cho tâm hồn và cơ thể. Limonic được hình thành từ chính tình
                                         yêu gia đình – nơi khởi nguồn của sự tử tế và chân thành.
@@ -16934,7 +17147,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-5 col-md-6 col-12">
-                                    <div class="wrap-info">
+                                    <div class="wrap-info" style="text-align: justify; line-height: 1.8;">
                                         Limonic mong muốn đánh thức những ký ức thân thương đã dịu dàng trôi qua – về
                                         những sáng thu se lạnh được mẹ dặn uống một ly chanh mật ong, về những ngày mưa
                                         gió cha lặng lẽ ngâm từng lát chanh vàng, về căn bếp nhỏ thơm nồng hương chanh,
@@ -16962,12 +17175,12 @@
                                 </div>
                                 <div class="intro-right">
                                     <div class="intro-desc">
-                                        <div class="wrap-heading text-center">
-                                            <p class="line">THÔNG ĐIỆP TỪ CHÚNG TÔI</p>
-                                            <h2>Câu chuyện thương hiệu</h2>
+                                        <div class="wrap-heading text-center" style="text-align: center !important;">
+                                            <p class="line" style="text-align: center !important;">THÔNG ĐIỆP TỪ CHÚNG TÔI</p>
+                                            <h2 style="text-align: center !important;">Câu chuyện thương hiệu</h2>
                                         </div>
                                         <div class="wrap-content">
-                                            <p>Ngày ấy, những năm 2010, trong khu chợ nhỏ ven đô, nơi mỗi sáng đều vang
+                                            <p style="text-align: justify;">Ngày ấy, những năm 2010, trong khu chợ nhỏ ven đô, nơi mỗi sáng đều vang
                                                 tiếng rao quen thuộc, chẳng ai là không biết đến lọ chanh đào ngâm mật
                                                 ong của Mẹ tôi – người phụ nữ tần tảo nhưng đầy tinh tế trong từng lát
                                                 chanh, hạt muối, giọt mật.
@@ -17024,12 +17237,12 @@
                                 </div>
                                 <div class="intro-right">
                                     <div class="intro-desc">
-                                        <div class="wrap-heading text-center">
-                                            <p class="line">THÔNG ĐIỆP TỪ CHÚNG TÔI</p>
-                                            <h2>Nét thanh lịch - Vị quà xưa</h2>
+                                        <div class="wrap-heading text-center" style="text-align: center !important;">
+                                            <p class="line" style="text-align: center !important;">THÔNG ĐIỆP TỪ CHÚNG TÔI</p>
+                                            <h2 style="text-align: center !important;">Nét thanh lịch - Vị quà xưa</h2>
                                         </div>
                                         <div class="wrap-content">
-                                            <p>Thanh sạch – Vị dịu dàng xưa của mẹ
+                                            <p style="text-align: justify;">Thanh sạch – Vị dịu dàng xưa của mẹ
                                                 "Thanh" ở đây là sự tinh khiết – trong vị, trong tâm, trong cách chọn
                                                 nguyên liệu. "Sạch" không chỉ là lời hứa an toàn, mà là triết lý sống,
                                                 là cách mẹ tôi từng ngâm từng lát chanh, từng hũ mật như chăm từng hơi
@@ -17135,7 +17348,7 @@
                         <div class="newsletter-widthAuto">
                             <div class="newsletter-title pb20">
                                 <h3>Đăng ký nhận bản tin</h3>
-                                <p class="subTitle">Để cập nhật những sản phẩm mới, nhận thông tin ưu đãi đặc biệt và
+                                <p class="subTitle" style="text-align: justify;">Để cập nhật những sản phẩm mới, nhận thông tin ưu đãi đặc biệt và
                                     thông tin giảm giá khác.</p>
                             </div>
                             <div class="newsletter-content newsletter-form">
@@ -17199,7 +17412,7 @@
                                             </a>
 
                                         </div>
-                                        <p>Limonic không đơn thuần là một sản phẩm – đó là một mảnh ký ức được hồi sinh!
+                                        <p style="text-align: justify;">Limonic không đơn thuần là một sản phẩm – đó là một mảnh ký ức được hồi sinh!
                                             Nơi để chúng tôi đưa niềm tự hào và hoài bão được nở hoa!</p>
 
                                         <ul class="footerNav-social">
